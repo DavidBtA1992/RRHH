@@ -1,0 +1,36 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+    form#nuevoEmpleadoForm
+      table
+          tr 
+            td ID
+              input#id(type="number", required) 
+          tr
+            td NOMBRE
+              input#nombre(type="text" required)
+          tr 
+            td APELLIDO
+              input#apellido(type="text" required)
+          tr
+            td SALARIO
+              input#salario(type="number" required)
+          tr 
+            td EPS
+              input#eps(type="text" required)
+          tr
+            td ARL
+              input#arl(type="text" required)
+          tr 
+            td FECHA DE NACIMIENTO
+              input#fna(type="date" required)
+          tr
+            td FECHA DE INGRESO
+              input#fin(type="date" required)
+          tr 
+            td FECHA DE EGRESO
+              input#feg(type="date")
+
+      input(type="submit", value="Crear")
