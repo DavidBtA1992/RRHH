@@ -1,36 +1,40 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
-    form#nuevoEmpleadoForm
-      table
-          tr 
-            td ID
-              input#id(type="number", required) 
-          tr
-            td NOMBRE
-              input#nombre(type="text" required)
-          tr 
-            td APELLIDO
-              input#apellido(type="text" required)
-          tr
-            td SALARIO
-              input#salario(type="number" required)
-          tr 
-            td EPS
-              input#eps(type="text" required)
-          tr
-            td ARL
-              input#arl(type="text" required)
-          tr 
-            td FECHA DE NACIMIENTO
-              input#fna(type="date" required)
-          tr
-            td FECHA DE INGRESO
-              input#fin(type="date" required)
-          tr 
-            td FECHA DE EGRESO
-              input#feg(type="date")
 
-      input(type="submit", value="Crear")
+  form(action="/", method="post") 
+    table
+    .container.text-center 
+      .row
+        .col 
+          tr 
+            span.input-group-text.text-wrap  ID
+              input.form-control(name="id", type="number", required) 
+          tr
+            span.input-group-text.text-wrap NOMBRE
+              input.form-control(name="nombre", type="text" required)
+          tr 
+            span.input-group-text.text-wrap APELLIDO
+              input.form-control(name="apellido", type="text" required)
+        .col 
+          tr
+            span.input-group-text.text-wrap SALARIO
+              input.form-control(name="salario", type="number" required)
+          tr 
+            span.input-group-text.text-wrap EPS
+              input.form-control(name="eps", type="text" required)
+          tr
+            span.input-group-text.text-wrap ARL
+              input.form-control(name="arl", type="text" required)
+        .col 
+            tr 
+              span.input-group-text.text-wrap FECHA DE NACIMIENTO
+                input.form-control(name="fna", type="date" required)
+            tr
+              span.input-group-text.text-wrap FECHA DE INGRESO
+                input.form-control(name="fin", type="date" required)
+            tr 
+              span.input-group-text.text-wrap FECHA DE EGRESO
+                input.form-control(name="feg", type="date")        
+
+      button.btn.btn-primary(type="submit") Crear
